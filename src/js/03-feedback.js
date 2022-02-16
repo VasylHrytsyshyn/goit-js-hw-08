@@ -31,9 +31,12 @@ function getLocalStorageDate() {
 };
 
 function onSubmit(e) {
-    e.preventDefault();    
-    console.log({ email: refs.input.value, message: refs.textarea.value });
-    e.target.reset();
-    localStorage.removeItem(LOCAL_KAY);
+    if (refs.input.value && refs.textarea.value) {
+        e.preventDefault();    
+        console.log({ email: refs.input.value, message: refs.textarea.value });
+        e.target.reset();
+        localStorage.removeItem(LOCAL_KAY);
+    }
+    
 }
 
