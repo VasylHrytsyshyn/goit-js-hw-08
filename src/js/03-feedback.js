@@ -36,6 +36,8 @@ function onSubmit(e) {
         console.log({ email: refs.input.value, message: refs.textarea.value });
         e.target.reset();
         localStorage.removeItem(LOCAL_KAY);
+    } else {
+        alert("Please fill in all fields of the form")
     }
     
 }
